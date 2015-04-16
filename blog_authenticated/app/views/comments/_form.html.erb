@@ -1,0 +1,16 @@
+<% if @comment.errors.any? %>
+<ul>
+  <%@comment.errors.full_messages.each do |err| %>
+  <li><%= err %></li>
+  <% end %>
+</ul>
+
+<% end %>
+
+
+<%= form_for [@entry, @comment] do |f| %>
+  <%= f.label :detail %>
+  <%= f.text_field :detail %>
+  <%= f.submit %>
+
+<%end%>

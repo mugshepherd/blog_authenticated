@@ -1,0 +1,8 @@
+<h2>Blog Entries</h2>
+
+<ul>
+    <li><%=link_to "Create New Entry", new_entry_path %></li>
+    <% @entries.each do |entry| %>
+        <li> <%= link_to entry.title, entry_path( entry.id )%></li>
+    <% end %>
+</ul>
